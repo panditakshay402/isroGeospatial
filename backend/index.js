@@ -14,8 +14,9 @@ app.use(bodyParser.json());
 const users = [];
 
 // Dummy route to check server status
-app.get('/', (req, res) => {
-    res.send('Server is running');
+app.post('/', (req, res) => {
+    console.log(req.body)
+    res.send('Server is yes running');
 });
 
 // Route for user registration
